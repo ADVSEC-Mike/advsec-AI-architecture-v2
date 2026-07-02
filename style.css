@@ -1,0 +1,893 @@
+/* --- ADVSEC BRAND PALETTE CONFIGURATION --- */
+:root {
+    --bg-offwhite: #F9F9FB;
+    --text-dark: #1A1A1C;
+    --text-muted: #53565A;
+    --advsec-blue: #1E3A8A;
+    --dark-bronze: #3D352E; /* Rich Bronze Profile */
+    --border-light: #E5E7EB;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-offwhite);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- STATIC HEADER STYLING --- */
+.static-header {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid var(--dark-bronze);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    height: 75px;
+    display: block;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* --- STABILIZED NAV DROPDOWN SYSTEMS --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item, .dropbtn {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover, .dropbtn:hover, .nav-item.active {
+    color: var(--advsec-blue);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 260px;
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.12);
+    border: 1px solid var(--border-light);
+    border-top: 4px solid var(--dark-bronze);
+    z-index: 1001;
+    margin-top: 8px;
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 14px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.15s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-offwhite);
+    color: var(--advsec-blue);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content {
+    display: block;
+}
+
+.disabled-link {
+    color: #A0AEC0 !important;
+    cursor: not-allowed;
+    background-color: #FAFAFA;
+}
+
+/* --- THE STICKY SCROLL TRACK CONDUIT --- */
+.viewport-command-deck {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    height: 250vh; /* Keeps the animation window long and smooth */
+    position: relative;
+}
+
+.text-mission-center {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.main-headline {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.sub-headline {
+    font-size: 22px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Container keeping things centered - NOW ACTS AS THE UNIFIED STICKY CARRIER */
+.blueprint-container-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* --- CRITICAL POSITION ENGINE --- */
+    position: -webkit-sticky;
+    position: sticky;
+    
+    /* Hard pixel clearance: 
+       75px (Header Height) + 20px (Clean visual breathing room) = 95px 
+       Locks the dashboard instantly on the first scroll click.
+    */
+    top: 95px; 
+    z-index: 50;
+}
+
+/* --- THE HEAVY BRONZE FLOATING VIEWPORT FRAME --- */
+.blueprint-outer-frame {
+    width: 100%;
+    max-width: 750px; 
+    height: 70vh;     
+    background-color: #EBEBEF;
+    border: 22px solid var(--dark-bronze); /* Premium Thick Profile */
+    
+    /* Deep 3D Floating Projection Shadows */
+    box-shadow: 0 30px 60px rgba(61, 53, 46, 0.25), 
+                0 12px 25px rgba(0, 0, 0, 0.15); 
+    
+    /* (Sticky properties removed from here so it doesn't detach from the text box) */
+}
+
+#openseadragon-viewer {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+/* --- RECALIBRATED STATUS PANEL (OUTSIDE AND BELOW) --- */
+#tactical-overlay {
+    width: 100%;
+    max-width: 750px;
+    margin: 25px auto 0 auto; /* Holds gap below the main frame */
+    background: #FFFFFF;
+    border-left: 6px solid var(--dark-bronze);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    z-index: 100;
+    position: relative;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    border-radius: 2px;
+    pointer-events: none; 
+}
+
+.overlay-header {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+#overlay-message {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.overlay-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay-hidden {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+/* --- STATIC FOOTER STYLING --- */
+.static-footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--border-light);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: auto;
+    position: relative;
+    z-index: 1002;
+}
+/* ==========================================================================
+   ADVSEC SOLUTIONS SUB-PAGE EXTENSIONS 
+   ========================================================================== */
+
+.product-deck-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-grow: 1;
+}
+
+.product-hero-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.patent-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    background-color: #EF4444;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.product-subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+/* Technical Layout Row Matrices */
+.technical-grid-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.technical-grid-row.reverse-row {
+    flex-direction: row-reverse; /* Flips placement to keep visual cadence alternating */
+}
+
+.text-column {
+    flex: 1;
+    min-width: 320px;
+}
+
+.graphic-column {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* Typography Overrides */
+.highlight-paragraph {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--advsec-blue);
+    padding-left: 15px;
+}
+
+.body-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* --- THE SUB-PAGE COMPACT BRONZE FRAME --- */
+.static-sub-frame {
+    background-color: #FFFFFF;
+    border: 10px solid var(--dark-bronze); /* Holds the brand framing theme scaled down */
+    box-shadow: 0 15px 35px rgba(61, 53, 46, 0.12);
+    position: relative;
+    border-radius: 2px;
+    line-height: 0; /* Clear edge rendering anomalies */
+}
+
+.product-graphic {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- ACTION PANEL DOWNLOAD CARDS --- */
+.download-action-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-top: 3px solid var(--dark-bronze);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    margin-top: 30px;
+    border-radius: 2px;
+}
+
+.download-meta {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.download-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.bronze-download-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--dark-bronze);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.bronze-download-btn:hover {
+    background-color: var(--advsec-blue);
+}
+
+/* Active sub-nav anchor marking */
+.active-sub {
+    background-color: var(--bg-offwhite);
+    color: var(--advsec-blue) !important;
+    font-weight: 700;
+}
+
+/* --- INTERACTIVE CANVAS OVERLAY TARGET DOTS --- */
+.canvas-dot {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: var(--dark-bronze);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: help;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.canvas-dot:hover {
+    transform: scale(1.15);
+    background-color: var(--advsec-blue);
+}
+
+/* Precise Coordinate Mappings over the PDF Layer Blueprint Graphic */
+.dot-layer-a { top: 22%; left: 45%; }
+.dot-layer-b { top: 48%; left: 45%; }
+.dot-layer-c { top: 74%; left: 45%; }
+/* ==========================================================================
+   ADVSEC SOLUTIONS SUB-PAGE EXTENSIONS: SILO CLEANER RECALIBRATION
+   ========================================================================== */
+
+.product-deck-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-grow: 1;
+}
+
+.product-hero-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.patent-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    background-color: #EF4444; /* High-Visibility Bright Red */
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.product-subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+/* Technical Layout Row Matrices */
+.technical-grid-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.technical-grid-row.reverse-row {
+    flex-direction: row-reverse; 
+}
+
+.text-column {
+    flex: 1;
+    min-width: 320px;
+}
+
+.graphic-column {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* Typography Overrides */
+.highlight-paragraph {
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--advsec-blue);
+    padding-left: 15px;
+}
+
+.body-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* --- THE SUB-PAGE COMPACT BRONZE FRAME --- */
+.static-sub-frame {
+    background-color: #FFFFFF;
+    border: 10px solid var(--dark-bronze); 
+    box-shadow: 0 15px 35px rgba(61, 53, 46, 0.12);
+    position: relative;
+    border-radius: 2px;
+    line-height: 0; 
+}
+
+/* --- ACTION PANEL DOWNLOAD CARDS --- */
+.download-action-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-top: 3px solid var(--dark-bronze);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    margin-top: 30px;
+    border-radius: 2px;
+}
+
+.download-meta {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.download-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.bronze-download-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--dark-bronze);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.bronze-download-btn:hover {
+    background-color: var(--advsec-blue);
+}
+
+.active-sub {
+    background-color: var(--bg-offwhite);
+    color: var(--advsec-blue) !important;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   ADVSEC SUB-PAGE: PROCESSING CANVAS & INTERACTIVE DOTS
+   ========================================================================== */
+
+/* 1. Center-stage the Bronze Frame with the Processing Graphic exclusively */
+.silo-processing-canvas {
+    display: block; 
+    height: auto; 
+    max-width: 1000px; 
+    margin: 0 auto 80px auto; 
+    overflow: hidden;
+    position: relative !important; /* CRITICAL: Locks dots to image */
+}
+
+.product-graphic {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- UNFREEZE SUB-PAGE CONTAINERS --- */
+.blueprint-container-block.static-flow {
+    position: static !important; /* CRITICAL: Kills sticky freeze for sub-pages only */
+    z-index: 1;
+}
+
+/* 2. Interactive Canvas Overlay Target Dots */
+.canvas-dot {
+    position: absolute;
+    width: 36px; 
+    height: 36px;
+    color: #FFFFFF;
+    background-color: #FBBF24; 
+    font-size: 16px; 
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: help;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.canvas-dot:hover {
+    transform: scale(1.15);
+    background-color: var(--advsec-blue); 
+}
+
+/* Hotspot Coordinates */
+.dot-A { top: 44%; left: 18%; } 
+.dot-B { top: 36%; left: 43%; } 
+.dot-C { top: 48%; left: 72%; } 
+.dot-layer-a { top: 22%; left: 45%; }
+.dot-layer-b { top: 48%; left: 45%; }
+.dot-layer-c { top: 74%; left: 45%; }
+
+/* ==========================================================================
+   ADVSEC SUB-PAGE: RESTO-MOD BANNER & THREAT GRID
+   ========================================================================== */
+
+.resto-mod-banner {
+    background-color: var(--advsec-blue);
+    color: #FFFFFF;
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 80px;
+    box-shadow: 0 15px 30px rgba(30, 58, 138, 0.2); 
+}
+
+.resto-title {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.resto-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 850px;
+    margin: 0 auto;
+    color: #E2E8F0; 
+}
+
+.diagnostic-threat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.threat-card {
+    background: #FFFFFF;
+    border-top: 5px solid var(--dark-bronze);
+    padding: 30px 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    border-radius: 2px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.threat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.threat-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.threat-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.threat-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+/* --- THE PORTAL LAUNCH BUTTON --- */
+.portal-launch-btn {
+    display: inline-block;
+    background-color: var(--advsec-blue);
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 20px 45px;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portal-launch-btn:hover {
+    background-color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(26, 26, 28, 0.3);
+}
+/* ==========================================================================
+   ADVSEC SECURE COMMUNICATIONS (CONTACT FORM)
+   ========================================================================== */
+
+.advsec-contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.advsec-contact-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.advsec-contact-form input[type="text"],
+.advsec-contact-form input[type="email"],
+.advsec-contact-form textarea {
+    width: 100%;
+    padding: 14px 15px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text-dark);
+    background-color: var(--bg-offwhite);
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+/* Hardened Focus State */
+.advsec-contact-form input:focus,
+.advsec-contact-form textarea:focus {
+    outline: none;
+    border-color: var(--dark-bronze);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(61, 53, 46, 0.1);
+}
+
+.advsec-contact-form textarea {
+    resize: vertical;
+}
+
+/* Heavy Bronze Submit Button */
+.bronze-submit-btn {
+    width: 100%;
+    display: block;
+    background-color: var(--dark-bronze);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(61, 53, 46, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bronze-submit-btn:hover {
+    background-color: var(--advsec-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(30, 58, 138, 0.25);
+}
+/* --- TACTICAL OVERLAY EXPANSION FOR HOME PAGE --- */
+#tactical-overlay {
+    min-height: 110px; 
+    padding: 25px 30px;
+}
+#overlay-message a:hover {
+    text-decoration: underline !important;
+}
+pointer-events: auto;
+/* --- TACTICAL OVERLAY LAUNCH BUTTON --- */
+.tactical-launch-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--advsec-blue);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-family: monospace; /* Gives it that secure terminal feel */
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    
+    /* This command absolutely forces the browser to allow clicks */
+    pointer-events: auto !important; 
+    position: relative;
+    z-index: 9999;
+}
+
+.tactical-launch-btn:hover {
+    background-color: var(--dark-bronze);
+    transform: translateY(-2px);
+}/* ==========================================================================
+   COMMAND DASHBOARD LAYOUT (Side-by-Side)
+   ========================================================================== */
+
+.blueprint-container-block {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /* --- NEW STICKY CENTERING --- */
+    position: sticky; 
+    top: 20vh; /* Pushes it down 10% from the top of the screen */
+    max-height: 80vh; /* Keeps the bottom from bleeding off standard screens */
+}
+
+/* The Map takes up 70% of the space */
+.blueprint-outer-frame {
+    flex: 7;
+    position: relative;
+    border: 8px solid var(--dark-bronze);
+    background-color: #000;
+}
+
+/* The Readout takes up 30% of the space */
+#tactical-overlay {
+    flex: 3;
+    position: static; /* Overrides old absolute positioning */
+    background-color: var(--bg-offwhite);
+    border: 4px solid var(--dark-bronze);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+}
+
+/* Mobile Stack Fallback */
+@media (max-width: 1000px) {
+    .blueprint-container-block {
+        flex-direction: column;
+    }
+    
+    #openseadragon-viewer {
+        height: 400px; /* Forces a reasonable height on mobile */
+    }
+    
+    #tactical-overlay {
+        min-height: auto;
+    }
+}
+/* --- THE SCROLL TRACK (Smoothes out the Waypoint Jumps) --- */
+.viewport-command-deck {
+    height: 400vh; /* 4 times the height of the screen */
+    position: relative;
+}
+/* --- POSITIVE AUDIT CARDS (Camera Fax Page) --- */
+.audit-card {
+    background-color: #FFFFFF;
+    border-top: 4px solid var(--advsec-blue);
+    border-bottom: 1px solid var(--border-light);
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+.audit-card:hover {
+    transform: translateY(-5px);
+}
