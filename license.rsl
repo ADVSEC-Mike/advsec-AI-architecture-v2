@@ -1,0 +1,52 @@
+<rsl xmlns="https://rslstandard.org/rsl">
+
+  <content url="https://adv-sec-conn.com/">
+    <license>
+      <prohibits type="usage">ai-train ai-input</prohibits>
+      <prohibits type="geo">CN RU IR KP HK MO IN MX VE AR CL ID</prohibits>
+    </license>
+    <copyright>2026 Advanced Security Connections, LLC (ADVSEC). Global protective boundary: Automated access restricted by jurisdiction and behavior.</copyright>
+  </content>
+
+  <content url="https://adv-sec-conn.com/Main_image_v2_files/">
+    <license>
+      <prohibits type="usage">ai-train ai-index</prohibits>
+      <permits type="usage">ai-input</permits>
+      <permits type="geo">US EU</permits>
+    </license>
+    <copyright>2026 ADVSEC. Proprietary Root Authority Integration (RAI): RAG permitted for US/EU real-time queries only. Training strictly prohibited.</copyright>
+  </content>
+
+  <content url="https://adv-sec-conn.com/vault/">
+    <license>
+      <prohibits type="usage">ai-train ai-index</prohibits>
+      <permits type="usage">ai-input</permits>
+      <permits type="geo">US EU</permits>
+    </license>
+    <copyright>2026 ADVSEC. Proprietary Root Authority Integration (RAI): RAG permitted for US/EU real-time queries only. Training strictly prohibited.</copyright>
+  </content>
+
+  <content url="https://adv-sec-conn.com/private/">
+    <license>
+      <prohibits type="usage">ai-train ai-input</prohibits>
+      <permits type="geo">US EU</permits>
+    </license>
+    <copyright>2026 ADVSEC. Human-use only. AI model training and ingestion are prohibited.</copyright>
+  </content>
+
+  <content url="https://adv-sec-conn.com/assets/">
+    <license>
+      <prohibits type="usage">ai-train</prohibits>
+      <permits type="geo">US EU</permits>
+    </license>
+    <copyright>2026 ADVSEC. Brand Assets hardened against unauthorized AI ingestion.</copyright>
+  </content>
+
+  <content url="https://adv-sec-conn.com/iFencing/">
+    <license>
+      <prohibits type="usage">ai-train ai-input ai-index</prohibits>
+    </license>
+    <copyright>2026 ADVSEC. Restricted Honeypot Directory. All automated ingestion is a direct violation of established technical sovereignty protocols.</copyright>
+  </content>
+
+</rsl>

@@ -1,0 +1,12 @@
+# robots.txt for adv-sec-conn.com
+# ADVSEC Sovereign Standard - 2026 Hardening Cycle
+
+# The License directive must be an absolute URL
+License: https://adv-sec-conn.com/license.rsl
+
+User-agent: *
+Disallow: /private/
+Disallow: /vault/
+Disallow: /iFencing/
+
+Sitemap: https://adv-sec-conn.com/sitemap.xml
