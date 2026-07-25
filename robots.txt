@@ -1,9 +1,8 @@
-# robots.txt for adv-sec-conn.com
+# robots.txt for Advanced Security Connections, LLC.
 # ADVSEC Sovereign Standard - 2026 Hardening Cycle
 
+User-agent: *
 # The License directive must be an absolute URL
 License: https://adv-sec-conn.com/license.rsl
-
-User-agent: *
 
 Sitemap: https://adv-sec-conn.com/sitemap.xml
