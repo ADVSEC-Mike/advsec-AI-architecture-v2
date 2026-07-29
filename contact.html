@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Communications - ADVSEC Solutions</title>
+    <title>Contact - ADVSEC Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific: the form was squeezed into a column width sized for
+           an image on other pages, not a multi-field form. Widening it here
+           rather than touching the shared stylesheet other pages rely on. */
+        .contact-form-frame { max-width: 620px; }
+        .contact-form-frame .form-group { margin-bottom: 22px; }
+        .contact-form-frame label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; color: var(--text-dark); }
+        .contact-form-frame input, .contact-form-frame textarea {
+            width: 100%; box-sizing: border-box; padding: 12px 14px; font-size: 15px;
+            border: 1px solid var(--border-light); border-radius: 4px;
+        }
+        @media (min-width: 900px) {
+            .contact-grid-row { gap: 50px; }
+            .contact-grid-row .graphic-column { flex: 1.3; }
+            .contact-grid-row .text-column { flex: 1; }
+        }
+    </style>
 </head>
 <body>
 
@@ -18,21 +35,18 @@
                 <div class="dropdown">
                     <button class="dropbtn">ADVSEC Solutions ▾</button>
                     <div class="dropdown-content">
-                        <a href="domain-security.html">Domain Security</a>
                         <a href="silo-cleaner.html">PDF Silo Cleaner</a>
-                        <a href="flagposting.html" >Flagposting Framework v1.0</a>
                         <a href="camera-fax.html">Camera FAX</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">ADVSEC Apps ▾</button>
                     <div class="dropdown-content">
-                        <a href="pdf-forensic-lab.html">PDF Metadata Portal </a>
-                        <a href="#" class="disabled-link">Sovereignty Scanner [Pipeline]</a>
-                        <a href="#" class="disabled-link">Robots/LLM Gate Decipher [Pipeline]</a>
+                        <a href="pdf-forensic-lab.html">PDF Metadata Forensic Portal</a>
                     </div>
                 </div>
                 <a href="about.html" class="nav-item">About</a>
+                <a href="partners.html" class="nav-item">Partners</a>
                 <a href="contact.html" class="nav-item active">Contact</a>
             </nav>
         </div>
@@ -42,14 +56,14 @@
         
         <div class="product-hero-header">
             <span class="patent-badge" style="background-color: var(--advsec-blue);">SECURE CHANNEL</span>
-            <h1 class="product-title">Contact Portal</h1>
-            <p class="product-subtitle">Direct access to ADVSEC technical oversight and architectural consulting.</p>
+            <h1 class="product-title">Get in Touch</h1>
+            <p class="product-subtitle">Reach out directly -- no ticket system, no runaround.</p>
         </div>
 
-        <section class="technical-grid-row" style="align-items: flex-start;">
+        <section class="technical-grid-row contact-grid-row" style="align-items: flex-start;">
             
             <div class="text-column">
-                <h2 class="section-heading" style="margin-bottom: 30px;">Direct Sovereign Channels</h2>
+                <h2 class="section-heading" style="margin-bottom: 30px;">Direct Contact Channels</h2>
                 
                 <div style="margin-bottom: 40px; border-left: 4px solid var(--advsec-blue); padding-left: 15px;">
                     <p style="font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 5px;">Mike Schweinsberg, Principal</p>
@@ -60,7 +74,7 @@
                 <div class="threat-card" style="margin-bottom: 30px; border-top: 4px solid var(--advsec-blue);">
                     <h3 class="threat-title" style="font-size: 16px;">Secure Email powered by Proton</h3>
                     <p class="threat-desc" style="font-size: 14px; margin-bottom: 15px;">
-                        For old-school email through modern cyber security goggles.
+                        Standard email, routed through a private, encrypted provider.
                     </p>
                     <a href="mailto:inquiry@adv-sec-conn.com" style="font-size: 15px; font-weight: 700; color: var(--advsec-blue); text-decoration: none;">[ inquiry@adv-sec-conn.com ]</a>
                 </div>
@@ -77,14 +91,18 @@
             </div>
 
             <div class="graphic-column">
-                <div class="static-sub-frame" style="padding: 40px; background-color: #FFFFFF; line-height: 1.6;">
+                <div class="static-sub-frame contact-form-frame" style="padding: 40px; background-color: #FFFFFF; line-height: 1.6;">
                     <h2 class="section-heading" style="font-size: 22px; margin-bottom: 10px;">CONTACT FORM</h2>
                     <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 30px; border-bottom: 1px solid var(--border-light); padding-bottom: 20px;">
-                        Submitted forms are sent directly to ADVSEC in-box and governed by strict cyber security protocols.
+                        Submitted forms are sent directly to ADVSEC in-box and governed by strict cyber security protocols. We typically respond within one business day.
                     </p>
 
-                    <form name="contact" method="POST" data-netlify="true" action="/success.html">
-                        
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+
                         <div class="form-group">
                             <label for="req-name">Full Name*</label>
                             <input type="text" id="req-name" name="req-name" required placeholder="Authorized Representative">
@@ -96,7 +114,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="req-email">Position*</label>
+                            <label for="req-position">Position*</label>
                             <input type="text" id="req-position" name="req-position" required placeholder="CEO, Security Director, etc.">
                         </div>
 
@@ -123,7 +141,15 @@
 
     </main>
 
-    <footer class="static-footer">
+<div class="legal-links-container" style="text-align: center; margin: 40px auto 20px auto; padding: 10px 0;">
+<p style="font-size: 14px; font-family: monospace;">
+<a href="ADV-WP-20260725-001-PrivacyPolicy_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-right: 20px;">Privacy Policy & Data Sovereignty Directive (PDF) 🔗</a>
+<span style="color: #666;">|</span>
+<a href="ADV-WP-20260725-002-TermsConditions_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-left: 20px;">Terms & Conditions (PDF) 🔗</a>
+</p>
+</div>
+
+<footer class="static-footer">
         <p>&copy; 2013 - 2026 Advanced Security Connections, LLC (ADVSEC). All Rights Reserved. Sovereign Infrastructure Protected.</p>
     </footer>
 

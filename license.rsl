@@ -5,7 +5,7 @@
       <prohibits type="geo">CN RU IR KP HK MO IN MX VE AR CL ID</prohibits>
       <permits type="usage">ai-all</permits>
       <payment type="attribution">
-        <custom>https://adv-sec-conn.com/vault/ADV_CRP_0003-A1_sealed.pdf</custom>
+        <custom>https://adv-sec-conn.com/resources/ADV-WP-20260725-002-TermsConditions_sealed.pdf</custom>
       </payment>	
     </license>
     <copyright>2026 Advanced Security Connections, LLC (ADVSEC)</copyright>

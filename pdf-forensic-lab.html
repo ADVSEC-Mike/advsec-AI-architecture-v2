@@ -18,9 +18,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">ADVSEC Solutions ▾</button>
                     <div class="dropdown-content">
-                        <a href="domain-security.html">Domain Security</a>
                         <a href="silo-cleaner.html">PDF Silo Cleaner</a>
-                        <a href="flagposting.html" >Flagposting Framework v1.0</a>
                         <a href="camera-fax.html">Camera FAX</a>
                     </div>
                 </div>
@@ -28,11 +26,10 @@
                     <button class="dropbtn">ADVSEC Apps ▾</button>
                     <div class="dropdown-content">
                         <a href="pdf-forensic-lab.html" class="active-sub">PDF Metadata Portal 🚀</a>
-                        <a href="#" class="disabled-link">Sovereignty Scanner [Pipeline]</a>
-                        <a href="#" class="disabled-link">Robots/LLM Gate Decipher [Pipeline]</a>
                     </div>
                 </div>
                 <a href="about.html" class="nav-item">About</a>
+                <a href="partners.html" class="nav-item">Partners</a>
                 <a href="contact.html" class="nav-item">Contact</a>
             </nav>
         </div>
@@ -59,7 +56,7 @@
 
         <div style="text-align: center; margin-bottom: 100px;">
             <a href="https://advsec-forensic-app-32z4mvpktznqekvthux5ea.streamlit.app/" target="_blank" class="portal-launch-btn">
-                INITIALIZE FORENSIC AUDIT 🚀
+                Launch the Forensic Portal 🚀
             </a>
             <p style="font-size: 13px; color: var(--text-muted); margin-top: 15px; font-weight: 600;">Opens secure Streamlit environment in a new tab.</p>
         </div>
@@ -69,7 +66,22 @@
                 <div class="static-sub-frame" style="border: 8px solid var(--dark-bronze); background-color: #FFFFFF;">
                     <img src="/assets/PDFtestingAPP.PNG" alt="ADVSEC PDF Forensic Portal Interface" class="product-graphic" style="display: block; border-radius: 2px;">
                 </div>
+                <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px;">
+                    <!-- TODO: swap this screenshot for a fresh one -- the badge/manifest/chat redesign below isn't reflected in this image yet -->
+                    Screenshot pending refresh to match the current interface.
+                </p>
             </div>
+        </section>
+
+        <!-- LIVE BADGE PREVIEW -- the actual pill-shaped status indicators the app produces -->
+        <section style="text-align: center; margin: 60px auto; max-width: 700px;">
+            <h2 class="section-heading" style="margin-bottom: 25px;">See the Verdict Before You Even Click</h2>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <div style="display:inline-block; padding:10px 24px; border-radius:999px; background-color:#E8F5E9; color:#1B5E20; font-weight:700; font-size:15px; border:1px solid #1B5E20;">🔒 SECURE & AI-FRIENDLY</div>
+                <div style="display:inline-block; padding:10px 24px; border-radius:999px; background-color:#FFF8E1; color:#8A6D00; font-weight:700; font-size:15px; border:1px solid #8A6D00;">⚠️ COMPLIANCE WARNING</div>
+                <div style="display:inline-block; padding:10px 24px; border-radius:999px; background-color:#FFEBEE; color:#B71C1C; font-weight:700; font-size:15px; border:1px solid #B71C1C;">🚨 SOVEREIGNTY RISK</div>
+            </div>
+            <p class="body-paragraph" style="margin-top: 20px;">Every scan returns one of these three, at a glance -- no digging through a report to find out where you stand.</p>
         </section>
 
         <div class="diagnostic-section">
@@ -84,23 +96,23 @@
                     <div class="threat-icon">🚦</div>
                     <h3 class="threat-title">The Status & Manifest</h3>
                     <p class="threat-desc">
-                        Upon completing a forensic scan, the engine generates a comprehensive Audit Manifest. A clear Green, Yellow, or Red status indicator provides an immediate, executive-level health assessment of your document's structural integrity.</em>
+                        Upon completing a forensic scan, the engine generates a comprehensive Audit Manifest. A clear Green, Yellow, or Red status indicator provides an immediate, executive-level health assessment of your document's structural integrity.
                     </p>
                 </div>
                 
                 <div class="threat-card">
                     <div class="threat-icon">🛡️</div>
-                    <h3 class="threat-title">CVE Logic Exploits</h3>
+                    <h3 class="threat-title">Real, Named Threat Detection</h3>
                     <p class="threat-desc">
-                        Because PDFs are complex structured data containers, they are highly susceptible to hidden CVE (Common Vulnerabilities and Exposures) logic exploits. Our forensic engine specifically scans the underlying layers to detect and isolate these embedded security risks.
+                        PDFs can carry hidden JavaScript-based exploits, not just bad metadata. Our engine specifically checks for CVE-2026-34621 -- a real, currently-exploited Adobe Acrobat vulnerability -- and flags it as a Cybersecurity Red Flag, not a vague warning.
                     </p>
                 </div>
                 
                 <div class="threat-card">
                     <div class="threat-icon">💬</div>
-                    <h3 class="threat-title">Integrated AI Diagnostics</h3>
+                    <h3 class="threat-title">An Auditor That Tells You How to Fix It</h3>
                     <p class="threat-desc">
-                        An AI command interface is built directly into the testing environment. Following a scan, you can query the model to instantly decipher complex metadata anomalies, identify specific errors, and recommend precise technical remediation steps.
+                        Ask the built-in Lead Auditor a follow-up question and it gives you the specific fix for what it found -- not just a restatement of the problem. Ask "how do I fix the copyright issue?" and get a real answer, not a recap.
                     </p>
                 </div>
 
@@ -109,7 +121,15 @@
      
     </main>
 
-    <footer class="static-footer">
+<div class="legal-links-container" style="text-align: center; margin: 40px auto 20px auto; padding: 10px 0;">
+<p style="font-size: 14px; font-family: monospace;">
+<a href="ADV-WP-20260725-001-PrivacyPolicy_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-right: 20px;">Privacy Policy & Data Sovereignty Directive (PDF) 🔗</a>
+<span style="color: #666;">|</span>
+<a href="ADV-WP-20260725-002-TermsConditions_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-left: 20px;">Terms & Conditions (PDF) 🔗</a>
+</p>
+</div>
+
+<footer class="static-footer">
         <p>&copy; 2013 - 2026 Advanced Security Connections, LLC (ADVSEC). All Rights Reserved. Sovereign Infrastructure Protected.</p>
     </footer>
 
