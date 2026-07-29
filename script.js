@@ -26,10 +26,10 @@ const viewer = OpenSeadragon({
     springStiffness: 9.0        
 });
 
-// --- TECHNICAL WAYPOINT REGISTRY (6 Waypoints) ---
-const wp1X = 0.50; const wp1Y = 0.45; const wp1Zoom = 1.0; // WP 1: Wide FOV
-const wp2X = 0.83; const wp2Y = 0.57; const wp2Zoom = 10.0; // WP 2: SOC
-const wp3X = 0.64; const wp3Y = 0.63; const wp3Zoom = 3.0; // WP 3: AEO 
+// --- TECHNICAL WAYPOINT REGISTRY (3 Waypoints) ---
+const wp1X = 0.50; const wp1Y = 0.41; const wp1Zoom = 1.0; // WP 1: Wide FOV
+const wp2X = 0.85; const wp2Y = 0.60; const wp2Zoom = 5.0; // WP 2: SOC
+const wp3X = 0.68; const wp3Y = 0.63; const wp3Zoom = 3.5; // WP 3: AEO 
 
 // --- CONTEXTUAL ADVISORY DATABASE (Secure Text Readouts) ---
 // NOTE: labeled by PURPOSE, not by wp-number -- confirm which coordinate
