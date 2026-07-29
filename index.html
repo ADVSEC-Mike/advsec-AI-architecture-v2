@@ -6,6 +6,23 @@
 <title>ADVSEC - PDF & Document Security for the AI Era</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
+<style>
+    /* Mobile fallback: deep-zoom pan/pinch is the wrong interaction for a
+       phone, even bug-free -- below this breakpoint, show a static image
+       + stacked story instead of the interactive viewer entirely. */
+    .mobile-story-fallback { display: none; }
+    @media (max-width: 768px) {
+        .viewport-command-deck { display: none; }
+        .mobile-story-fallback {
+            display: block; padding: 20px 15px; max-width: 600px; margin: 0 auto;
+        }
+        .mobile-story-fallback img { width: 100%; height: auto; border-radius: 6px; display: block; }
+        .mobile-story-block { margin: 15px 0 40px 0; }
+        .mobile-story-block h3 { color: var(--advsec-blue); font-size: 20px; margin-bottom: 10px; }
+        .mobile-story-block p { font-size: 16px; line-height: 1.6; color: var(--text-dark); }
+        .mobile-story-block a { display: inline-block; margin-top: 10px; color: var(--advsec-blue); font-weight: 700; text-decoration: none; }
+    }
+</style>
 </head>
 <body>
 
@@ -42,7 +59,7 @@
 <p class="sub-headline">We seal your PDFs with real, verifiable ownership -- so AI tools recognize your content as yours, instead of guessing.</p>
 </div>
 
-<!-- COMMAND CONSOLE DASHBOARD -->
+<!-- COMMAND CONSOLE DASHBOARD (desktop only -- hidden below 768px) -->
 <div class="blueprint-container-block">
 <div class="blueprint-outer-frame">
 <div id="openseadragon-viewer"></div>
@@ -53,6 +70,32 @@
 </div>
 </div>
 </main>
+
+<!-- MOBILE FALLBACK: same three beats as the desktop deep-zoom story,
+     delivered as a normal scroll instead of pinch-zoom. TODO: swap the
+     three placeholder image paths below for your own high-res screenshots
+     matching each waypoint, once you've captured them. -->
+<div class="mobile-story-fallback">
+<img src="/assets/mobile-overview.jpg" alt="ADVSEC secure compound, full overview">
+<div class="mobile-story-block">
+<h3>A Complete Security Operation.</h3>
+<p>Physical security and digital security used to be two separate jobs. We built ADVSEC on the idea that they're actually one job -- protecting what's yours, whether it's a building or a document.</p>
+</div>
+
+<img src="/assets/mobile-heritage.jpg" alt="ADVSEC physical security infrastructure documentation">
+<div class="mobile-story-block">
+<h3>Where We Started: Physical Security.</h3>
+<p>Since 1991, we've documented and audited IP-based security video systems -- cameras, switches, recorders, all the infrastructure most companies lose track of over time. That same discipline for knowing exactly what you have, and proving it, is where everything else we do began.</p>
+<a href="camera-fax.html">See Camera FAX →</a>
+</div>
+
+<img src="/assets/mobile-focus.jpg" alt="ADVSEC underground security operations center, sealed and verified">
+<div class="mobile-story-block">
+<h3>The Same Discipline, Applied to Your Documents.</h3>
+<p>Your PDF library deserves the same level of proof your physical assets get. The PDF Silo Cleaner rebuilds ownership data into every file in your library, then seals each one with a real, verifiable digital signature -- so an AI reading your documents can trust them the same way it would trust a verified building.</p>
+<a href="silo-cleaner.html">See the PDF Silo Cleaner →</a>
+</div>
+</div>
 
 <div class="ibm-validation-quote" style="max-width: 900px; margin: 60px auto; padding: 30px; border-left: 5px solid var(--advsec-blue); background-color: #f8f9fa;">
 <p style="font-size: 20px; font-style: italic; line-height: 1.6; color: var(--text-dark); margin-bottom: 15px;">
@@ -124,9 +167,13 @@ The PDF Silo Cleaner is our patent-pending tool that fixes all three problems ab
 
 <div class="legal-links-container" style="text-align: center; margin: 40px auto 20px auto; padding: 10px 0;">
 <p style="font-size: 14px; font-family: monospace;">
-<a href="/resources/ADV-WP-20260725-001-PrivacyPolicy_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-right: 20px;">Privacy Policy & Data Sovereignty Directive (PDF) 🔗</a>
+<a href="/resources/ADV-WP-20260725-001-PrivacyPolicy_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-right: 20px;">
+Privacy Policy & Data Sovereignty Directive (PDF) 🔗
+</a>
 <span style="color: #666;">|</span>
-<a href="/resources/ADV-WP-20260725-002-TermsConditions_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-left: 20px;">Terms & Conditions (PDF) 🔗</a>
+<a href="/resources/ADV-WP-20260725-002-TermsConditions_sealed.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--advsec-blue); text-decoration: none; margin-left: 20px;">
+Terms & Conditions (PDF) 🔗
+</a>
 </p>
 </div>
 

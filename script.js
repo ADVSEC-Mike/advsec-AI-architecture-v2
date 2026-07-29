@@ -1,3 +1,11 @@
+// --- MOBILE GUARD ---
+// Deep-zoom pan/pinch is the wrong interaction for a phone -- below the
+// breakpoint (or if the viewer element isn't even on the page), skip all
+// of this entirely rather than trying to make it merely "work" on mobile.
+// Also guards against this file ever being loaded on a page that doesn't
+// have the viewer element at all.
+if (window.innerWidth >= 768 && document.getElementById('openseadragon-viewer')) {
+
 // --- INITIALIZE ADVSEC SCROLL ENGINE CONTROLLER ---
 const viewer = OpenSeadragon({
     id: "openseadragon-viewer",
@@ -19,9 +27,9 @@ const viewer = OpenSeadragon({
 });
 
 // --- TECHNICAL WAYPOINT REGISTRY (6 Waypoints) ---
-const wp1X = 0.50; const wp1Y = 0.44; const wp1Zoom = 1.0; // WP 1: Wide FOV
-const wp2X = 0.85; const wp2Y = 0.60; const wp2Zoom = 5.0; // WP 2: SOC
-const wp3X = 0.68; const wp3Y = 0.63; const wp3Zoom = 3.5; // WP 3: AEO 
+const wp1X = 0.50; const wp1Y = 0.45; const wp1Zoom = 1.0; // WP 1: Wide FOV
+const wp2X = 0.83; const wp2Y = 0.57; const wp2Zoom = 10.0; // WP 2: SOC
+const wp3X = 0.64; const wp3Y = 0.63; const wp3Zoom = 3.0; // WP 3: AEO 
 
 // --- CONTEXTUAL ADVISORY DATABASE (Secure Text Readouts) ---
 // NOTE: labeled by PURPOSE, not by wp-number -- confirm which coordinate
@@ -97,3 +105,5 @@ window.addEventListener('scroll', function() {
     viewer.viewport.panTo(new OpenSeadragon.Point(currentX, currentY), false);
     viewer.viewport.zoomTo(currentZoom, null, false);
 });
+
+} // end mobile guard
