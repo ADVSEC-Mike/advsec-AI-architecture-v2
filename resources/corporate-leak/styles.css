@@ -1,0 +1,264 @@
+/* ---------------------------------------------
+   Tokens — pulled from the ship illustrations
+   --------------------------------------------- */
+:root {
+  --ink:        #14161C;
+  --ink-soft:   #454A56;
+  --paper:      #F5F6F8;
+  --rule:       #DDE1E8;
+
+  --crimson:    #C42B2B;   /* the ship's hull red */
+  --navy:       #1F2A63;   /* the water, deepened */
+  --water:      #4C5FD6;   /* the water, as-illustrated */
+  --sun:        #FBDD2E;   /* the sun */
+
+  --display:    'Fraunces', Georgia, serif;
+  --body-font:  'IBM Plex Sans', -apple-system, sans-serif;
+  --mono:       'IBM Plex Mono', ui-monospace, monospace;
+
+  --col-width:  680px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------
+   Full-bleed sections (hero / closer)
+   --------------------------------------------- */
+.bleed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bleed img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 42vw, 600px);
+  object-fit: cover;
+}
+
+.hero-copy {
+  max-width: var(--col-width);
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--crimson);
+  margin: 0 0 14px;
+}
+
+h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.subhead {
+  font-size: 19px;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* ---------------------------------------------
+   Reading column
+   --------------------------------------------- */
+.column {
+  max-width: var(--col-width);
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+}
+
+.column p {
+  margin: 0 0 26px;
+}
+
+.pivot {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--navy);
+}
+
+.transition {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+  margin-top: 8px !important;
+}
+
+/* Pull quotes — the page's one recurring signature */
+.pull-quote {
+  margin: 40px 0 44px;
+  padding-left: 22px;
+  border-left: 3px solid var(--crimson);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.pull-quote.large {
+  font-size: 32px;
+  border-left-color: var(--navy);
+  margin-top: 48px;
+}
+
+/* Inline (column-width) image with frame */
+.inline-image {
+  margin: 12px 0 40px;
+}
+
+.inline-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+
+/* ---------------------------------------------
+   3-step plan
+   --------------------------------------------- */
+.steps {
+  list-style: none;
+  margin: 12px 0 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.steps li {
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 22px 18px 24px;
+  background: #FFFFFF;
+}
+
+.step-num {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.step-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.steps h3 {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.steps p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ---------------------------------------------
+   Closer / CTA
+   --------------------------------------------- */
+.closer .cta {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: var(--crimson);
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transition: background 0.15s ease;
+}
+
+.btn:hover { background: #A82323; }
+
+.btn:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------
+   Responsive
+   --------------------------------------------- */
+@media (max-width: 720px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .column, .hero-copy {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pull-quote { font-size: 22px; }
+  .pull-quote.large { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
