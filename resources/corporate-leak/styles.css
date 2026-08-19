@@ -51,8 +51,7 @@ body {
 .bleed img {
   display: block;
   width: 100%;
-  height: clamp(220px, 32vw, 480px);
-  object-fit: cover;
+  height: auto;
 }
 
 .hero-copy {
