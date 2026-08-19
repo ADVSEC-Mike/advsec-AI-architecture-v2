@@ -33,13 +33,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (min-width: 721px) {
+  body { padding-top: 20px; }
+}
+
 /* ---------------------------------------------
    Full-bleed sections (hero / closer)
    --------------------------------------------- */
 .bleed {
   position: relative;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1160px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -207,14 +211,16 @@ h1 {
 /* ---------------------------------------------
    Closer / CTA
    --------------------------------------------- */
+.closer {
+  display: flex;
+  flex-direction: column;
+}
+
 .closer .cta {
-  position: absolute;
-  left: 50%;
-  bottom: 28px;
-  transform: translateX(-50%);
-  width: 100%;
+  padding: 32px 24px 48px;
   display: flex;
   justify-content: center;
+  background: var(--paper);
 }
 
 .btn {
